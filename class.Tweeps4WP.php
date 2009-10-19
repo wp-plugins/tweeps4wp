@@ -106,7 +106,7 @@ public function tweeps4wp_create_list() {
 	if ( $this->tweeps4wp_cache != "ERROR" ) 
 		$XML = simplexml_load_string($this->tweeps4wp_cache);
 	else 
-		return "ERROR";		
+		return "Not available at this time.";
 
 	//$tweeplist .= "<div style=\"width: 95%; margin: 0 auto\">\n";
 	$tweeplist .= "<div style=\"text-align:justify\">";

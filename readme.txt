@@ -4,7 +4,7 @@ Donate link: http://wp.anoop.net/tweeps4wp
 Tags: twitter, following, friends, widgets
 Requires at least: 2.8
 Tested to: 2.8.4
-Stable tag: 0.0.2
+Stable tag: 0.0.3
 
 A simple widget that enumerates the list of users you're following or the users that are following you
 
@@ -31,6 +31,9 @@ violate the quotas.
 The photos link to the twitter pages of your tweep.
 
 == Changelog ==
+
+= 0.0.3 =
+* Having an incorrect password produces all sorts of nasty errors. Made these errors go away and simply display a message stating that the list is not available at this time. 
 
 = 0.0.2 =
 * fixed justification issues and tested in Firefox, IE7, Safari, and Opera
