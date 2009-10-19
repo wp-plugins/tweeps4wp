@@ -35,6 +35,10 @@ public function tweeps4wp_controls() {
 	$this->tweeps4wp_twitter_password = (isset($_POST['tweeps4wp_twitter_password']) ? $_POST['tweeps4wp_twitter_password'] : "");
 	$this->tweeps4wp_updateinterval = (isset($_POST['tweeps4wp_updateinterval']) ? $_POST['tweeps4wp_updateinterval'] : "");
 	$this->tweeps4wp_photosize = (isset($_POST['tweeps4wp_updateinterval']) ? $_POST['tweeps4wp_photosize'] : "");
+
+	if(function_exists('wp_cache_no_postid')) 
+		wp_cache_no_postid(0);
+
 	if ( $this->tweeps4wp_title != null && $this->tweeps4wp_title != "" ) 
 		update_option("tweeps4wp_title", stripslashes($this->tweeps4wp_title) );
 
