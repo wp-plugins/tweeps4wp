@@ -103,7 +103,10 @@ public function tweeps4wp_create_list() {
 
 	$tweeplist = "";
 
-	$XML = simplexml_load_string($this->tweeps4wp_cache);
+	if ( $this->tweeps4wp_cache != "ERROR" ) 
+		$XML = simplexml_load_string($this->tweeps4wp_cache);
+	else 
+		return "ERROR";		
 
 	//$tweeplist .= "<div style=\"width: 95%; margin: 0 auto\">\n";
 	$tweeplist .= "<div style=\"text-align:justify\">";
