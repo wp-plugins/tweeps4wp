@@ -117,7 +117,7 @@ public function tweeps4wp_create_list() {
 		if ( $this->tweeps4wp_photosize == "mini" ) 
 			$profile_image_mini = preg_replace('/_normal\.(.+)/', '_mini.\1', $profile_image_mini);
 		// create
-		$tweeplist .= "<span><a href=\"http://twitter.com/$screen_name\" title=\"$name\"><img src=\"$profile_image_mini\"></a> </span>\n";
+		$tweeplist .= "<span><a href=\"http://twitter.com/$screen_name\" title=\"$name\"><img src=\"$profile_image_mini\" height=\"24\" width=\"24\" ></a> </span>\n";
 	}
 	$tweeplist .= "<br /><small><a href=\"http://twitter.com/$this->tweeps4wp_twitter_username/" . (( $this->tweeps4wp_group == "friends" ) ? "following" : "followers") . "\">View all</a> | ";
 	$tweeplist .= "<a href=\"https://twitter.com/$this->tweeps4wp_twitter_username\">Follow @$this->tweeps4wp_twitter_username</a></small>";

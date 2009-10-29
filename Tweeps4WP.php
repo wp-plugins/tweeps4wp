@@ -3,7 +3,7 @@
 Plugin Name: Tweeps4WP
 Plugin URI: http://wp.anoop.net/tweeps4wp
 Description: Display your friends or followers in a widget in WP
-Version: 0.0.3
+Version: 0.0.4
 Author: Anoop Bhat
 Author URI: http://wp.anoop.net
 
