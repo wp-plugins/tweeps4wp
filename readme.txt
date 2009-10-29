@@ -3,8 +3,8 @@ Contributors: anoopbhat, reaperhulk
 Donate link: http://wp.anoop.net/tweeps4wp
 Tags: twitter, following, friends, widgets
 Requires at least: 2.8
-Tested to: 2.8.4
-Stable tag: 0.0.3
+Tested to: 2.8.5
+Stable tag: 0.0.5
 
 A simple widget that enumerates the list of users you're following or the users that are following you
 
@@ -31,6 +31,12 @@ violate the quotas.
 The photos link to the twitter pages of your tweep.
 
 == Changelog ==
+
+= 0.0.5 = 
+bug in 0.0.4. Found immediately. normal images were no longer displaying correctly. Fixed it so mini resizes to 24x24 and normal to 48x48. 
+
+= 0.0.4 =
+mini images from twitter aren't always mini. They're called mini but sometimes they're normal. This update ensures that all images are resized to 24x24 just like twitter.com does.
 
 = 0.0.3 =
 * Having an incorrect password produces all sorts of nasty errors. Made these errors go away and simply display a message stating that the list is not available at this time. 

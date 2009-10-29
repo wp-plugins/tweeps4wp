@@ -113,11 +113,14 @@ public function tweeps4wp_create_list() {
 	foreach ($XML->user as $user) {
 		$name = $user->name;
 		$screen_name = $user->screen_name;
-		$profile_image_mini = $user->profile_image_url;
-		if ( $this->tweeps4wp_photosize == "mini" ) 
-			$profile_image_mini = preg_replace('/_normal\.(.+)/', '_mini.\1', $profile_image_mini);
-		// create
-		$tweeplist .= "<span><a href=\"http://twitter.com/$screen_name\" title=\"$name\"><img src=\"$profile_image_mini\"></a> </span>\n";
+		$profile_image = $user->profile_image_url;
+                if ( $this->tweeps4wp_photosize == "mini" )  {
+                        $profile_image = preg_replace('/_normal\.(.+)/', '_mini.\1', $profile_image);
+                        $tweeplist .= "<span><a href=\"http://twitter.com/$screen_name\" title=\"$name\"><img src=\"$profile_image\" height=\"24\" width=\"24\"></a> </span>\n";
+                } else if ( $this->tweeps4wp_photosize == "normal" ) {
+                        $tweeplist .= "<span><a href=\"http://twitter.com/$screen_name\" title=\"$name\"><img src=\"$profile_image\" height=\"48\" width=\"48\"></a> </span>\n";
+
+                }
 	}
 	$tweeplist .= "<br /><small><a href=\"http://twitter.com/$this->tweeps4wp_twitter_username/" . (( $this->tweeps4wp_group == "friends" ) ? "following" : "followers") . "\">View all</a> | ";
 	$tweeplist .= "<a href=\"https://twitter.com/$this->tweeps4wp_twitter_username\">Follow @$this->tweeps4wp_twitter_username</a></small>";
